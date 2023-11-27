@@ -1,0 +1,17 @@
+.theme_changer {
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
+  }
+}

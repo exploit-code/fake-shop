@@ -1,0 +1,32 @@
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--accents-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
+  }
+
+  &__copyright {
+    color: var(--accents-2);
+  }
+}

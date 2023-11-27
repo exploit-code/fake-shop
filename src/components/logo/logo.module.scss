@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
+
+    &_active {
+      color: var(--accents-1);
+    }
+  }
+}

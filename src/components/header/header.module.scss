@@ -1,0 +1,33 @@
+.header {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--accents-2);
+
+  &__group,
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
+
+    &_active {
+      color: var(--accents-1);
+    }
+  }
+}
