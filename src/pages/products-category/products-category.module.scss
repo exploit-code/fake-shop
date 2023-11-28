@@ -1,0 +1,13 @@
+.products_category {
+  margin: 32px 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+
+    @media screen and (min-width: 768px) {
+      gap: 32px;
+    }
+  }
+}
