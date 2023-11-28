@@ -9,7 +9,6 @@ export const ProductsCategoryPage = () => {
     (store) => store.productsCategory
   );
 
-
   return (
     <>
       {loading || error ? (
