@@ -17,21 +17,18 @@ export const categories = (state = initialState, action) => {
         ...state,
         loading: true,
       };
-
     case GET_CATEGORIES_SUCCESS:
       return {
         ...state,
         loading: false,
         categories: action.payload,
       };
-
     case GET_CATEGORIES_ERROR:
       return {
         ...state,
         loading: false,
         error: true,
       };
-
     default:
       return state;
   }

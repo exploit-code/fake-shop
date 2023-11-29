@@ -17,6 +17,7 @@
     padding: 8px;
     border-radius: 50%;
     background-color: var(--hsla);
+    backdrop-filter: var(--blur);
 
     &:hover svg {
       color: var(--hover-state);

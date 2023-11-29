@@ -17,21 +17,18 @@ export const products = (state = initialState, action) => {
         ...state,
         loading: true,
       };
-
     case GET_PRODUCTS_SUCCESS:
       return {
         ...state,
         loading: false,
         products: action.payload,
       };
-
     case GET_PRODUCTS_ERROR:
       return {
         ...state,
         loading: false,
         error: true,
       };
-
     default:
       return state;
   }

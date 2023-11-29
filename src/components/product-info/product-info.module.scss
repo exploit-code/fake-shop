@@ -1,0 +1,29 @@
+.product_info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__img_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--only-white);
+    border-radius: var(--border-radius);
+    padding: 16px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+  }
+
+  &__desc {
+    color: var(--accents-1);
+  }
+
+  &__price {
+    color: var(--accents-1);
+  }
+}

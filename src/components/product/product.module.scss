@@ -5,10 +5,11 @@
   background-color: var(--hsla);
   padding: 16px;
   border-radius: var(--border-radius);
+  cursor: pointer;
 
   &__img_box {
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--only-white);
     border-radius: var(--border-radius);
     padding: 16px;
     display: flex;

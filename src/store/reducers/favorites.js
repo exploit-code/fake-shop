@@ -11,7 +11,6 @@ export const favorites = (state = initialState, action) => {
         ...state,
         favorites: [...state.favorites, action.payload],
       };
-
     case REMOVE_FAVORITES:
       const updFavorites = state.favorites.filter(
         (el) => el.id !== action.payload.id
@@ -20,7 +19,6 @@ export const favorites = (state = initialState, action) => {
         ...state,
         favorites: updFavorites,
       };
-
     default:
       return state;
   }

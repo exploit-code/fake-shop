@@ -3,12 +3,12 @@ import { products } from "./products";
 import { categories } from "./categories";
 import { theme } from "./theme";
 import { favorites } from "./favorites";
-import { productsCategory } from "./products-category";
+import { currentProduct } from "./current-product";
 
 export const rootReducer = combineReducers({
   theme,
   products,
   categories,
-  productsCategory,
+  currentProduct,
   favorites,
 });
