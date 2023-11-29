@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.escuelajs.co/api/v1/";
+const BASE_URL = "https://fakestoreapi.com/";
 
 const checkResponse = (res) => {
   if (res) return res.json();

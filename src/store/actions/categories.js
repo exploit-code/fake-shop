@@ -6,7 +6,7 @@ export const GET_CATEGORIES_ERROR = "GET_CATEGORIES_ERROR";
 
 export const getCategories = () => (dispatch) => {
   dispatch({ type: GET_CATEGORIES_REQUEST });
-  request("categories?offset=0&limit=5")
+  request("products/categories")
     .then((res) => dispatch({ type: GET_CATEGORIES_SUCCESS, payload: res }))
     .catch(() => dispatch({ type: GET_CATEGORIES_ERROR }));
 };

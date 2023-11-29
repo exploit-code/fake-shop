@@ -8,17 +8,17 @@ export const Products = () => {
   const { products, loading, error } = useSelector((store) => store.products);
 
   return (
-    <>
+    <section className={styles.products}>
       <SectionTitle title={"All products"} />
       {loading || error ? (
         <Preloader text={loading ? "Loading" : "Error"} />
       ) : (
-        <section className={styles.products}>
+        <div className={styles.products__grid}>
           {products.map((item) => (
             <Product {...item} key={item.id} />
           ))}
-        </section>
+        </div>
       )}
-    </>
+    </section>
   );
 };
