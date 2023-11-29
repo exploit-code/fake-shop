@@ -1,4 +1,4 @@
-import { ADD_FAVORITES, REMOVE_FAVORITES } from "../actions/favorites";
+import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from "../actions/favorites";
 
 const initialState = {
   favorites: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 export const favorites = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_FAVORITES:
+    case ADD_TO_FAVORITES:
       const isExist = state.favorites.some(
         (item) => item.id === action.payload.id
       );
@@ -17,7 +17,7 @@ export const favorites = (state = initialState, action) => {
         };
       } else return state;
 
-    case REMOVE_FAVORITES:
+    case REMOVE_FROM_FAVORITES:
       const updFavorites = state.favorites.filter(
         (el) => el.id !== action.payload.id
       );
