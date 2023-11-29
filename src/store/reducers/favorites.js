@@ -7,10 +7,16 @@ const initialState = {
 export const favorites = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAVORITES:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.payload],
-      };
+      const isExist = state.favorites.some(
+        (item) => item.id === action.payload.id
+      );
+      if (!isExist) {
+        return {
+          ...state,
+          favorites: [...state.favorites, action.payload],
+        };
+      } else return state;
+
     case REMOVE_FAVORITES:
       const updFavorites = state.favorites.filter(
         (el) => el.id !== action.payload.id

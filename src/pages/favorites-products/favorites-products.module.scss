@@ -1,5 +1,6 @@
-.products {
+.favorites_products {
   display: grid;
+  align-content: baseline;
   gap: 32px;
 
   &__grid {

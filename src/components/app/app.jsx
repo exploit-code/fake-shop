@@ -5,7 +5,7 @@ import { getProducts } from "../../store/actions/products";
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
 import { MainPage } from "../../pages/main/main";
-import { FavoritesPage } from "../../pages/favorites/favorites";
+import { FavoritesProductsPage } from "../../pages/favorites-products/favorites-products";
 import { CartPage } from "../../pages/cart/cart";
 import { NotFoundPage } from "../../pages/not-found/not-found";
 import { ProductsPage } from "../../pages/products/products";
@@ -28,7 +28,7 @@ export const App = () => {
       <Routes location={background || location}>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/:id" element={<ProductsPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/favorites" element={<FavoritesProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

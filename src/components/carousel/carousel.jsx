@@ -30,7 +30,7 @@ export const Carousel = ({ images }) => {
   }, [hovered, images.length]);
 
   return (
-    <div
+    <section
       className={styles.carousel}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -52,6 +52,6 @@ export const Carousel = ({ images }) => {
       >
         <MdOutlineKeyboardDoubleArrowRight className={styles.carousel__icon} />
       </button>
-    </div>
+    </section>
   );
 };
