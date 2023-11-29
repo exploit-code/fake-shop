@@ -1,0 +1,10 @@
+.products {
+  margin: var(--margin-section);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__title {
+    color: var(--accents-1);
+  }
+}

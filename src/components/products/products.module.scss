@@ -1,7 +1,7 @@
 .products {
   display: grid;
   gap: 32px;
-  margin: 32px 0;
+  margin: var(--margin-section);
 
   &__grid {
     display: grid;

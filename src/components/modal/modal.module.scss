@@ -43,4 +43,8 @@
     height: 24px;
     color: var(--accents-1);
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 24px;
+  }
 }

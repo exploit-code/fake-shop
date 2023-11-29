@@ -12,6 +12,7 @@
   --only-white: #ffffff;
   --border-radius: 8px;
   --shadow: rgba(255, 255, 255, 0.1);
+  --margin-section: 32px 0;
 }
 
 [data-theme="light"] {
@@ -23,7 +24,6 @@
   --outline-color: #eb367f;
   --geist-state: #29bc9b;
   --only-white: #ffffff;
-  --border-radius: 8px;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 

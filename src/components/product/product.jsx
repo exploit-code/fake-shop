@@ -1,12 +1,18 @@
 import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./product.module.scss";
 import { setCurrentProduct } from "../../store/actions/current-product";
 
-export const Product = ({ product, openModal }) => {
+export const Product = ({ product }) => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleProductClick = () => {
-    openModal();
     dispatch(setCurrentProduct(product));
+    navigate(`/products/${product.id}`, {
+      state: { background: location },
+    });
   };
 
   return (
