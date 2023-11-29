@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 export const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hovered, setHovered] = useState(false);
 
   const goToNextSlide = useCallback(() => {
     const nextIndex = (currentIndex + 1) % images.length;
@@ -18,12 +19,22 @@ export const Carousel = ({ images }) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(goToNextSlide, 6000);
+    let interval;
+    if (!hovered) {
+      interval = setInterval(
+        () => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length),
+        6000
+      );
+    }
     return () => clearInterval(interval);
-  }, [currentIndex, goToNextSlide]);
+  }, [hovered, images.length]);
 
   return (
-    <div className={styles.carousel}>
+    <div
+      className={styles.carousel}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <button
         onClick={goToPrevSlide}
         className={classNames(styles.carousel__btn, styles.carousel__btn_left)}
