@@ -3,6 +3,7 @@ import {
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_ERROR,
 } from "../actions/products";
+import { v4 as uuidv4 } from "uuid";
 
 const initialState = {
   products: [],
@@ -18,10 +19,14 @@ export const products = (state = initialState, action) => {
         loading: true,
       };
     case GET_PRODUCTS_SUCCESS:
+      const updatedProducts = action.payload.map((item) => ({
+        ...item,
+        uuid: uuidv4(),
+      }));
       return {
         ...state,
         loading: false,
-        products: action.payload,
+        products: updatedProducts,
       };
     case GET_PRODUCTS_ERROR:
       return {

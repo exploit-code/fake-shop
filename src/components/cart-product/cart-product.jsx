@@ -1,20 +1,23 @@
 import { useDispatch } from "react-redux";
 import styles from "./cart-product.module.scss";
-import { removeFavorites } from "../../store/actions/favorites";
+import { removeFromCart } from "../../store/actions/cart";
 import classNames from "classnames";
 import { AiOutlineDelete } from "react-icons/ai";
 
 export const CartProduct = ({ product }) => {
   const dispatch = useDispatch();
 
-  const handleRemoveFavorites = (product) => {
-    dispatch(removeFavorites(product));
+  const handleRemoveFromCart = (product) => {
+    dispatch(removeFromCart(product));
   };
 
   return (
     <article className={styles.favorite_product}>
       <div className={styles.favorite_product__head}>
         <div className={styles.favorite_product__img_box}>
+          <span className={styles.favorite_product__count}>
+            {product.count}
+          </span>
           <img
             className={styles.favorite_product__img}
             src={product.image}
@@ -23,7 +26,7 @@ export const CartProduct = ({ product }) => {
           <div className={styles.favorite_product__btn_group}>
             <button
               className={classNames(styles.favorite_product__btn)}
-              onClick={() => handleRemoveFavorites(product)}
+              onClick={() => handleRemoveFromCart(product)}
             >
               <AiOutlineDelete className={styles.favorite_product__icon} />
             </button>
