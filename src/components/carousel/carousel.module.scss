@@ -40,13 +40,17 @@
 
   &__img {
     width: 100%;
-    min-height: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
   }
 
   @media screen and (min-width: 768px) {
     height: 350px;
+
+    &__img {
+      height: 350px;
+    }
+
     &__btn {
       &_left {
         left: 16px;
@@ -59,5 +63,9 @@
 
   @media screen and (min-width: 1280px) {
     height: 450px;
+
+    &__img {
+      height: 450px;
+    }
   }
 }
