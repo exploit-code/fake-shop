@@ -1,7 +1,7 @@
 import styles from "./products.module.scss";
 import { useSelector } from "react-redux";
 import { Product } from "../product/product";
-import { Preloader } from "../preloader/preloader";
+import { PreLoader } from "../preloader/preloader";
 import { SectionTitle } from "../section-title/section-title";
 
 export const Products = () => {
@@ -11,7 +11,7 @@ export const Products = () => {
     <section className={styles.products}>
       <SectionTitle title={"All products"} />
       {loading || error ? (
-        <Preloader text={loading ? "Loading" : "Error"} />
+        <PreLoader text={loading ? "Loading" : "Error"} />
       ) : (
         <div className={styles.products__grid}>
           {products.map((item) => (
