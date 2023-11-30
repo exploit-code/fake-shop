@@ -9,6 +9,7 @@ import styles from "./main.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { cachingImages } from "../../store/actions/carousel";
+import { useMemo } from "react";
 
 export const MainPage = () => {
   const dispatch = useDispatch();
@@ -19,10 +20,13 @@ export const MainPage = () => {
     dispatch(cachingImages(images));
   }, [dispatch]);
 
+  const MemoizedCarousel = useMemo(() => <Carousel images={carousel} />, [carousel]);
+  const MemoizedProducts = useMemo(() => <Products />, []);
+
   return (
     <main className={classNames(styles.main, "container")}>
-      <Carousel images={carousel} />
-      <Products />
+      {MemoizedCarousel}
+      {MemoizedProducts}
     </main>
   );
 };

@@ -7,8 +7,9 @@ import { FiHeart } from "react-icons/fi";
 import { TbShoppingCartShare } from "react-icons/tb";
 import { addToCart } from "../../store/actions/cart";
 import classNames from "classnames";
+import { memo } from "react";
 
-export const Product = ({ product }) => {
+export const Product = memo(({ product }) => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
@@ -59,4 +60,4 @@ export const Product = ({ product }) => {
       </div>
     </article>
   );
-};
+});

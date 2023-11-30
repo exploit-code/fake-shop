@@ -3,8 +3,9 @@ import styles from "./carousel.module.scss";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import classNames from "classnames";
+import { memo } from "react";
 
-export const Carousel = ({ images }) => {
+export const Carousel = memo(({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
 
@@ -54,4 +55,4 @@ export const Carousel = ({ images }) => {
       </button>
     </section>
   );
-};
+});
