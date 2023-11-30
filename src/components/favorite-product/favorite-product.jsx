@@ -20,12 +20,13 @@ export const FavoriteProduct = ({ product }) => {
   return (
     <article className={styles.favorite_product}>
       <div className={styles.favorite_product__head}>
-        <div className={styles.favorite_product__img_box}>
-          <img
-            className={styles.favorite_product__img}
-            src={product.image}
-            alt={product.title}
-          />
+        <img className={styles.favorite_product__img} src={product.image} alt={product.title} />
+      </div>
+      <div className={styles.favorite_product__body}>
+        <h4 className={styles.favorite_product__title}>{product.title}</h4>
+
+        <div className={styles.favorite_product__footer}>
+          <p className={styles.favorite_product__price}>{product.price} $</p>
           <div className={styles.favorite_product__btn_group}>
             <button
               className={classNames(styles.favorite_product__btn)}
@@ -42,10 +43,6 @@ export const FavoriteProduct = ({ product }) => {
             </button>
           </div>
         </div>
-      </div>
-      <div className={styles.favorite_product__body}>
-        <h4 className={styles.favorite_product__title}>{product.title}</h4>
-        <p className={styles.favorite_product__price}>{product.price} $</p>
       </div>
     </article>
   );

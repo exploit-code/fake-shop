@@ -12,30 +12,22 @@ export const CartProduct = ({ product }) => {
   };
 
   return (
-    <article className={styles.favorite_product}>
-      <div className={styles.favorite_product__head}>
-        <div className={styles.favorite_product__img_box}>
-          <span className={styles.favorite_product__count}>
-            {product.count}
-          </span>
-          <img
-            className={styles.favorite_product__img}
-            src={product.image}
-            alt={product.title}
-          />
-          <div className={styles.favorite_product__btn_group}>
-            <button
-              className={classNames(styles.favorite_product__btn)}
-              onClick={() => handleRemoveFromCart(product)}
-            >
-              <AiOutlineDelete className={styles.favorite_product__icon} />
-            </button>
-          </div>
-        </div>
+    <article className={styles.cart_product}>
+      <div className={styles.cart_product__head}>
+        <span className={styles.cart_product__count}>{product.count}</span>
+        <img className={styles.cart_product__img} src={product.image} alt={product.title} />
       </div>
-      <div className={styles.favorite_product__body}>
-        <h4 className={styles.favorite_product__title}>{product.title}</h4>
-        <p className={styles.favorite_product__price}>{product.price} $</p>
+      <div className={styles.cart_product__body}>
+        <h4 className={styles.cart_product__title}>{product.title}</h4>
+        <div className={styles.cart_product__footer}>
+          <p className={styles.cart_product__price}>{product.price} $</p>
+          <button
+            className={classNames(styles.cart_product__btn)}
+            onClick={() => handleRemoveFromCart(product)}
+          >
+            <AiOutlineDelete className={styles.cart_product__icon} />
+          </button>
+        </div>
       </div>
     </article>
   );

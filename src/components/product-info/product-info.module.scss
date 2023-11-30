@@ -3,13 +3,19 @@
   flex-direction: column;
   gap: 16px;
 
-  &__img_box {
+  &__head {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--only-white);
     border-radius: var(--border-radius);
     padding: 16px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   &__img {
@@ -23,7 +29,15 @@
     color: var(--accents-2);
   }
 
+  &__rating {
+    color: var(--accents-1);
+  }
+
   &__price {
     color: var(--accents-1);
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
   }
 }

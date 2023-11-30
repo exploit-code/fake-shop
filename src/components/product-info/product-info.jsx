@@ -10,17 +10,22 @@ export const ProductInfo = () => {
 
   return viewProduct ? (
     <article className={styles.product_info}>
-      <div className={styles.product_info__img_box}>
+      <div className={styles.product_info__head}>
         <img
           className={styles.product_info__img}
           src={viewProduct.image}
           alt={viewProduct.title}
         />
       </div>
-      <p className={styles.product_info__desc}>{viewProduct.description}</p>
-      <p className={styles.product_info__price}>
-        <b>{viewProduct.price} $</b>
-      </p>
+      <div className={styles.product_info__body}>
+        <p className={styles.product_info__desc}>{viewProduct.description}</p>
+        <p className={styles.product_info__rating}>
+          Rating: {viewProduct.rating.rate}
+        </p>
+        <p className={styles.product_info__price}>
+          <b>Price: {viewProduct.price} $</b>
+        </p>
+      </div>
     </article>
   ) : (
     <NotFoundPage />

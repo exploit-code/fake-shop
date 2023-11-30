@@ -7,7 +7,7 @@
   border-radius: var(--border-radius);
   cursor: pointer;
 
-  &__img_box {
+  &__head {
     width: 100%;
     background-color: var(--only-white);
     border-radius: var(--border-radius);
@@ -17,17 +17,25 @@
     align-items: center;
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
   &__img {
     width: 100%;
     height: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
   }
 
   &__title {
@@ -36,5 +44,30 @@
 
   &__price {
     color: var(--accents-1);
+  }
+
+  &__btn_group {
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
   }
 }
