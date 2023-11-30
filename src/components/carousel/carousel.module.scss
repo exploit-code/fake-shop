@@ -3,7 +3,7 @@
   align-items: center;
   width: 100%;
   position: relative;
-  max-height: 450px;
+  height: 300px;
   border-radius: var(--border-radius);
   overflow: hidden;
 
@@ -40,12 +40,13 @@
 
   &__img {
     width: 100%;
+    min-height: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 16/9;
   }
 
   @media screen and (min-width: 768px) {
+    height: 350px;
     &__btn {
       &_left {
         left: 16px;
@@ -54,5 +55,9 @@
         right: 16px;
       }
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 450px;
   }
 }
