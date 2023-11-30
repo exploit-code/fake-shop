@@ -30,16 +30,15 @@ export const FavoriteProduct = ({ product }) => {
           <div className={styles.favorite_product__btn_group}>
             <button
               className={classNames(styles.favorite_product__btn)}
-              onClick={() => handleRemoveFavorites(product)}
-            >
-              <AiOutlineDelete className={styles.favorite_product__icon} />
-            </button>
-
-            <button
-              className={classNames(styles.favorite_product__btn)}
               onClick={() => handleAddToCart(product)}
             >
               <TbShoppingCartShare className={styles.favorite_product__icon} />
+            </button>
+            <button
+              className={classNames(styles.favorite_product__btn)}
+              onClick={() => handleRemoveFavorites(product)}
+            >
+              <AiOutlineDelete className={styles.favorite_product__icon} />
             </button>
           </div>
         </div>
