@@ -1,9 +1,14 @@
 .footer {
-  padding: 24px 0;
-  border-top: 1px solid var(--accents-2);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  backdrop-filter: blur(16px);
+  background-color: var(--hsla);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
 
   &__group {
     display: flex;

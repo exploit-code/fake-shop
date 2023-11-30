@@ -14,36 +14,38 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Logo />
-      <div className={styles.header__group}>
-        <nav className={styles.header__nav}>
-          <NavLink to={"/cart"} className={styles.header__link}>
-            {({ isActive }) => (
-              <>
-                <Counter products={cart} />
-                <TbShoppingCartDollar
-                  className={classNames(styles.header__icon, {
-                    [styles.header__icon_active]: isActive,
-                  })}
-                />
-              </>
-            )}
-          </NavLink>
-          <NavLink to={"/favorites"} className={styles.header__link}>
-            {({ isActive }) => (
-              <>
-                <Counter products={favorites} />
-                <FiHeart
-                  className={classNames(styles.header__icon, {
-                    [styles.header__icon_active]: isActive,
-                  })}
-                />
-              </>
-            )}
-          </NavLink>
-        </nav>
+      <div className={classNames(styles.header__content, "container")}>
+        <Logo />
+        <div className={styles.header__group}>
+          <nav className={styles.header__nav}>
+            <NavLink to={"/cart"} className={styles.header__link}>
+              {({ isActive }) => (
+                <>
+                  <Counter products={cart} />
+                  <TbShoppingCartDollar
+                    className={classNames(styles.header__icon, {
+                      [styles.header__icon_active]: isActive,
+                    })}
+                  />
+                </>
+              )}
+            </NavLink>
+            <NavLink to={"/favorites"} className={styles.header__link}>
+              {({ isActive }) => (
+                <>
+                  <Counter products={favorites} />
+                  <FiHeart
+                    className={classNames(styles.header__icon, {
+                      [styles.header__icon_active]: isActive,
+                    })}
+                  />
+                </>
+              )}
+            </NavLink>
+          </nav>
 
-        <ThemeChanger />
+          <ThemeChanger />
+        </div>
       </div>
     </header>
   );

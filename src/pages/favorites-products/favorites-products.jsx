@@ -3,12 +3,13 @@ import { FavoriteProduct } from "../../components/favorite-product/favorite-prod
 import { useSelector } from "react-redux";
 import { SectionTitle } from "../../components/section-title/section-title";
 import { CalcPrice } from "../../components/calc-price/calc-price";
+import classNames from "classnames";
 
 export const FavoritesProductsPage = () => {
   const { favorites } = useSelector((store) => store.favorites);
 
   return (
-    <section className={styles.favorites_products}>
+    <main className={classNames(styles.favorites_products, "container")}>
       <SectionTitle title={"Favorites"} />
       <CalcPrice products={favorites} />
       {!favorites.length ? (
@@ -22,6 +23,6 @@ export const FavoritesProductsPage = () => {
           ))}
         </div>
       )}
-    </section>
+    </main>
   );
 };
