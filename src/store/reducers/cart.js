@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cart";
+import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_CART } from "../actions/cart";
 
 const initialState = {
   cart: [],
@@ -7,9 +7,7 @@ const initialState = {
 export const cart = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      const existingProductIndex = state.cart.findIndex(
-        (item) => item.id === action.payload.id
-      );
+      const existingProductIndex = state.cart.findIndex((item) => item.id === action.payload.id);
 
       if (existingProductIndex !== -1) {
         const updatedCart = [...state.cart];
@@ -30,9 +28,7 @@ export const cart = (state = initialState, action) => {
       }
 
     case REMOVE_FROM_CART:
-      const indexToRemove = state.cart.findIndex(
-        (item) => item.id === action.payload.id
-      );
+      const indexToRemove = state.cart.findIndex((item) => item.id === action.payload.id);
 
       if (indexToRemove !== -1) {
         const updatedCart = [...state.cart];
@@ -47,6 +43,10 @@ export const cart = (state = initialState, action) => {
         };
       }
       return state;
+
+    case CLEAR_CART:
+      return initialState;
+
     default:
       return state;
   }

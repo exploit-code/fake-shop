@@ -18,6 +18,12 @@
     gap: 16px;
   }
 
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
   &__img {
     width: 100%;
     object-fit: contain;
@@ -35,6 +41,31 @@
 
   &__price {
     color: var(--accents-1);
+  }
+
+  &__btn_group {
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accents-2);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--accents-1);
+    }
   }
 
   @media screen and (min-width: 768px) {

@@ -1,6 +1,7 @@
 .products {
   display: grid;
   gap: 32px;
+  align-content: baseline;
 
   &__grid {
     display: grid;

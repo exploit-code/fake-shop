@@ -1,0 +1,16 @@
+.clear_button {
+  background: var(--hsla);
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--accents-2);
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--accents-1);
+  }
+}

@@ -3,6 +3,12 @@
   align-content: baseline;
   gap: 16px;
 
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__grid {
     display: grid;
     gap: 16px;

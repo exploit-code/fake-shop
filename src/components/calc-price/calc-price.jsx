@@ -8,5 +8,5 @@ export const CalcPrice = memo(({ products }) => {
       return item.price * count + acc;
     }, 0)
     .toFixed(2);
-  return <p className={styles.calc_price}>Total price: {totalPrice}</p>;
+  return <p className={styles.calc_price}>Total price: {totalPrice} $</p>;
 });
