@@ -22,6 +22,11 @@ export const App = () => {
 
   useEffect(() => dispatch(getProducts()), [dispatch]);
 
+  useEffect(() => {
+    const body = document.body;
+    background ? body.classList.add("locked") : body.classList.remove("locked");
+  }, [background]);
+
   return (
     <>
       <Header />
