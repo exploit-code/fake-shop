@@ -1,9 +1,9 @@
 import styles from "./cart.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import classNames from "classnames";
+import { useDispatch, useSelector } from "../../store/hooks";
 import { CalcPrice } from "../../components/calc-price/calc-price";
 import { SectionTitle } from "../../components/section-title/section-title";
 import { CartProduct } from "../../components/cart-product/cart-product";
-import classNames from "classnames";
 import { clearCart } from "../../store/actions/cart";
 import { ClearButton } from "../../components/clear-button/clear-button";
 

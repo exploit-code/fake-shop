@@ -1,11 +1,11 @@
 import styles from "./calc-price.module.scss";
 import { memo } from "react";
-import { IProductUpgrade } from "../../models/models";
+import { IProduct, IProductUpgrade } from "../../models/models";
 
-export const CalcPrice = memo(({ products }: { products: IProductUpgrade[] }) => {
+export const CalcPrice = memo(({ products }: { products: (IProduct | IProductUpgrade)[] }) => {
   const totalPrice = products
     .reduce((acc, item) => {
-      const count = item.count || 1;
+      const count = "count" in item ? item.count : 1;
       return item.price * count + acc;
     }, 0)
     .toFixed(2);

@@ -1,6 +1,6 @@
 import styles from "./favorites-products.module.scss";
 import { FavoriteProduct } from "../../components/favorite-product/favorite-product";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "../../store/hooks";
 import { SectionTitle } from "../../components/section-title/section-title";
 import { CalcPrice } from "../../components/calc-price/calc-price";
 import classNames from "classnames";

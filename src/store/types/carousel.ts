@@ -6,7 +6,7 @@ export interface IStateCarusel {
 
 export interface ICachingImages {
   readonly type: typeof CACHING_IMAGES;
-  readonly payload: string;
+  readonly payload: string[];
 }
 
 export type TCaruselUnionActions = ICachingImages;
